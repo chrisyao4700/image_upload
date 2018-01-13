@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form role="form" id="myForm" action="/post_image" method="post" enctype="multipart/form-data">
+<form role="form" id="myForm" action="http://192.168.1.204:3000/apps" method="post" enctype="multipart/form-data">
 
     <input type="hidden" name="policy" value="">
     <input type="hidden" name="signature" value="">
@@ -22,6 +22,7 @@
     <div class="form-group">
         <label for="url" class="col-sm-2 control-label"><s>*</s>图片选择:</label>
 
+        <input type="hidden" name="service_code" value="upload_app_image">
         <div class="col-sm-7">
             <input type="file" name="fulAvatar" id="file_upload" value=""
                    class="form-control" placeholder="图片地址" onchange="uploadByForm();">
@@ -31,10 +32,10 @@
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-7">
 
-            <a id="btnAjax" onclick=>Ajax上传</a>
             <input type="submit" value="提交"/>
         </div>
     </div>
 </form>
+<a id="btnAjax" href="#" onclick="uploadByForm()">Ajax上传</a>
 </body>
 </html>

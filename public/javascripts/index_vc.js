@@ -4,7 +4,8 @@ var $ = require('jQuery');
 function uploadByForm() {
     //用form 表单直接 构造formData 对象; 就不需要下面的append 方法来为表单进行赋值了。
     var formData = new FormData($("#myForm")[0]);
-    var url = "http://localhost:3000/photos/myPhotos";
+    var url = "http://192.168.1.204:3000/apps";
+    alert('I am here');
     $.ajax({
         url: url,
         type: 'POST',
